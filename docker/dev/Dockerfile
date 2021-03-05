@@ -5,7 +5,6 @@ RUN /bin/sed -i 's/archive\.ubuntu\.com/mirror\.yandex\.ru/g' /etc/apt/sources.l
         build-essential \
         pkg-config \
         software-properties-common \
-        libgl1-mesa-glx \
         git \
         cmake \
         curl \
