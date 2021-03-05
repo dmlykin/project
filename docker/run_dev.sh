@@ -19,7 +19,6 @@ elif [[ $(docker ps -f name=$1 -a | tail -1 | grep $1) ]]; then
 else
     docker run -d -P -v $(readlink -e ../):/home/developer/project \
     --name=$1 \
-    --gpus=all \
     --ipc=host \
     project:dev
 fi
