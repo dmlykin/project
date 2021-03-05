@@ -1,0 +1,30 @@
+name: rec-pipelines
+channels:
+  - pytorch
+  - defaults
+  - conda-forge
+  - qwant
+dependencies:
+  - python=3.7
+  - future
+  - pyyaml
+  - setuptools
+  - six
+  - typing
+  - typing-extensions
+  - luigi
+  - jupyter
+  - h5py
+  - numpy
+  - scipy
+  - pandas
+  - PyMySQL
+  - scikit-learn
+  - matplotlib
+  - requests
+  - mysqlclient
+  - sqlalchemy
+  - psycopg2
+  - tqdm
+  - pip:
+      - tqdm
