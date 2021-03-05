@@ -1,4 +1,4 @@
-name: rec-pipelines
+name: project
 channels:
   - pytorch
   - defaults

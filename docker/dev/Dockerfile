@@ -21,7 +21,7 @@ WORKDIR /tmp
 RUN curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /root/conda
 ENV PATH "/root/conda/bin:$PATH"
-ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
+# ENV LD_LIBRARY_PATH /usr/local/cuda/extras/CUPTI/lib64:$LD_LIBRARY_PATH
 ADD environment.yml /tmp/environment.yml
 RUN conda update -n base -c defaults conda && \
     conda env create -f environment.yml && \
@@ -51,10 +51,10 @@ RUN echo "echo \"PasswordAuthentication no\" >> /etc/ssh/sshd_config" >> /root/s
 
 USER developer
 RUN mkdir /home/developer/.jupyter
-RUN mkdir /home/developer/rec-pipelines
-WORKDIR /home/developer/rec-pipelines
+RUN mkdir /home/developer/project
+WORKDIR /home/developer/project
 
 USER root
 ADD supervisord /etc/supervisor/conf.d/
-RUN exec /bin/bash && conda activate rec-pipelines
+RUN exec /bin/bash && conda activate project
 CMD ["supervisord", "-n"]
