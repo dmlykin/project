@@ -49,7 +49,7 @@ RUN echo "echo \"PasswordAuthentication no\" >> /etc/ssh/sshd_config" >> /root/s
     echo "service ssh restart" >> /root/ssh_disable_password.sh && \
     chmod +x /root/ssh_disable_password.sh
 
-USER auto
+USER developer
 RUN mkdir /home/developer/.jupyter
 RUN mkdir /home/developer/rec-pipelines
 WORKDIR /home/developer/rec-pipelines
