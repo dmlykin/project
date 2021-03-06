@@ -12,15 +12,20 @@ from urllib.error import URLError
 from flask import Flask, request, jsonify, json, send_file
 from requests import HTTPError
 
+from flasgger import Swagger
+
 from src.datamodel.iterpretator import Interpretator
 from werkzeug.utils import secure_filename
 
 from src.prod.utils import jpeg_bytes_io
 
 app = Flask(__name__)
+swagger = Swagger(app)
+
 
 
 @app.route('/health_check', methods=['GET'])
+@swag_from('colors.yml')
 def health_check():
     data = 'Hello, World!'
     response = app.response_class(

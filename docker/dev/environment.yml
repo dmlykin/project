@@ -32,3 +32,4 @@ dependencies:
   - pip:
       - tqdm
       - pillow
+      - flasgger

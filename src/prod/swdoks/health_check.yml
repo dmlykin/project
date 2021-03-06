@@ -1,0 +1,15 @@
+Health check of service
+---
+parameters:
+  - name: None
+    param: None
+  Color:
+    type: string
+responses:
+  200:
+    description: Health check of service
+    schema:
+      $ref: '#/health_check'
+    examples:
+      response: 'Ok'
+
