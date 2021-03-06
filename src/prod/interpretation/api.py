@@ -1,3 +1,8 @@
+import sys
+
+sys.path.append('../')
+sys.path.append('../..')
+
 import os
 # import urllib
 import urllib.request
