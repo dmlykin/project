@@ -31,4 +31,4 @@ dependencies:
   - opencv
   - pip:
       - tqdm
-      - PIL
+      - pillow
