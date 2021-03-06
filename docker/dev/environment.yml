@@ -26,5 +26,6 @@ dependencies:
   - sqlalchemy
   - psycopg2
   - tqdm
+  - flask
   - pip:
       - tqdm
