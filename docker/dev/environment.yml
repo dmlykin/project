@@ -29,6 +29,6 @@ dependencies:
   - flask
   - numpy
   - opencv
-  - PIL
   - pip:
       - tqdm
+      - PIL
