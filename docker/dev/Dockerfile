@@ -17,6 +17,11 @@ RUN /bin/sed -i 's/archive\.ubuntu\.com/mirror\.yandex\.ru/g' /etc/apt/sources.l
         supervisor \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
+EXPOSE 22
+EXPOSE 8888
+EXPOSE 8889
+
+
 WORKDIR /tmp
 RUN curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /root/conda
@@ -52,6 +57,8 @@ RUN echo "echo \"PasswordAuthentication no\" >> /etc/ssh/sshd_config" >> /root/s
 USER developer
 RUN mkdir /home/developer/.jupyter
 RUN mkdir /home/developer/project
+RUN mkdir /home/developer/.shh
+RUN touch /home/developer/.shh/authorized_keys
 WORKDIR /home/developer/project
 
 USER root
