@@ -27,5 +27,8 @@ dependencies:
   - psycopg2
   - tqdm
   - flask
+  - numpy
+  - opencv
+  - PIL
   - pip:
       - tqdm
