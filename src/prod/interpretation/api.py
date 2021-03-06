@@ -2,6 +2,7 @@ import sys
 
 sys.path.append('../')
 sys.path.append('../..')
+sys.path.append('/home/developer/project')
 
 import os
 # import urllib
