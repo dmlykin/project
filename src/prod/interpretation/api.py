@@ -25,7 +25,7 @@ swagger = Swagger(app)
 
 
 @app.route('/health_check', methods=['GET'])
-@swagger.swag_from('colors.yml')
+@swag_from('colors.yml')
 def health_check():
     data = 'Hello, World!'
     response = app.response_class(

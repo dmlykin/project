@@ -1,11 +1,20 @@
 from flask import Flask
 from flask import Flask, request, jsonify, json
+from flasgger import Swagger
+from flasgger import swag_from
+
 
 app = Flask(__name__)
+swagger = Swagger(app)
 
-@app.route('/')
+path = './swdoks/health_check.yml'
+
+@app.route('/health_check')
 def health_check():
-    data = 'Hello, World!'
+    """
+    file: ./swdoks/health_check.yml
+    """
+    data = 'Ok'
     response = app.response_class(
         response=json.dumps(data),
         status=200,

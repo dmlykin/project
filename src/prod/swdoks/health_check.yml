@@ -1,15 +1,22 @@
-Health check of service
----
 parameters:
-  - name: None
-    param: None
-  Color:
+  - name: none
+    in: path
+    type: string
+    required: false
+    default: none
+definitions:
+  Status:
+    type: object
+    properties:
+      status:
+        type: string
+  Respons:
     type: string
 responses:
   200:
-    description: Health check of service
+    description: Status of service
     schema:
-      $ref: '#/health_check'
+      $ref: '#/definitions/Status'
     examples:
       response: 'Ok'
 
