@@ -12,7 +12,7 @@ path = './swdoks/health_check.yml'
 @app.route('/health_check')
 def health_check():
     """
-    file: ./swdoks/health_check.yml
+    file: /src/swdoks/health_check.yml
     """
     data = 'Ok'
     response = app.response_class(
