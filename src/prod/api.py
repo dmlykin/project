@@ -1,3 +1,9 @@
+import sys
+
+sys.path.append('../')
+sys.path.append('../..')
+sys.path.append('/home/developer/project')
+
 from flask import Flask
 from flask import Flask, request, jsonify, json
 from flasgger import Swagger
